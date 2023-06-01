@@ -1,0 +1,76 @@
+/* The CSS for the body gives it a background image that doesn't repeat */
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 2500px;
+}
+
+/* The CSS for the div tag gives it a specific height and width, it centers it and gives it a black border */
+.container{
+    height: 300px;
+    width: 550px;
+    border-style: solid;
+    border-color: black;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+}
+
+/* The CSS for the images gives it a height and a width */
+img{
+    height: 120px;
+    width: 85px;
+}
+
+/* The CSS for the label and span tag sets their font size and puts them in the center */
+label{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+span{
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+/* The CSS for the div tag with class popup has a specific height and width, has a white background, 
+an absolute position and has it hidden at the top of the screen. It is also given transitions that 
+allow it to  go from the top to the middle of the screen */
+.popup{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+/* When this class is called in the JavaScript program the popup becomes visible and comes to the 
+center of the screen */
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* The CSS below gives the button in the popup a height, width, background-colour, font-colour and size */
+.popup button{
+    width: 150px;
+    height: 50px;
+    background-color: #6fd649;
+    color: #fff;
+    font-size: 15px;
+}
